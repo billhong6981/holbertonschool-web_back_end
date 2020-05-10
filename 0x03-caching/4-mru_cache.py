@@ -17,7 +17,7 @@ class MRUCache(BaseCaching):
         """Most recent use tracker"""
         l = [x for x in self.key_tracker.keys()]
         self.most_use_key = l[0]
-        most_use  = self.key_tracker.get(self.most_use_key)
+        most_use = self.key_tracker.get(self.most_use_key)
         for x in l:
             recent_use = self.key_tracker.get(x)
             if recent_use > most_use:

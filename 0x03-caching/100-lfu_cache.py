@@ -17,7 +17,7 @@ class LFUCache(BaseCaching):
         """least frequent use tracker"""
         l = [x for x in self.key_tracker.keys()]
         self.least_use_key = l[0]
-        least_use  = self.key_tracker.get(self.least_use_key)
+        least_use = self.key_tracker.get(self.least_use_key)
         for x in l:
             recent_use = self.key_tracker.get(x)
             if recent_use < least_use:
