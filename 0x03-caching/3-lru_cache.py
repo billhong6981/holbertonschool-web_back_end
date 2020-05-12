@@ -47,5 +47,5 @@ class LRUCache(BaseCaching):
             self.key_tracker.pop(x)
             self.cache_data.pop(x)
         self.cache_data.update({key: item})
-        self.key_tracker.update({key: self.count})
         self.count += 1
+        self.key_tracker.update({key: self.count})
